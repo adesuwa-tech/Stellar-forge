@@ -44,7 +44,7 @@ use serde_json::json;
 use tracing::{error, info, warn};
 
 use crate::controller::finalizers::STELLAR_NODE_FINALIZER;
-use crate::controller::finalizers::cloud_verify::{CloudVerifier, VolumeAttachmentState};
+use crate::controller::finalizers::cloud_verify::CloudVerifier;
 use crate::crd::StellarNode;
 use crate::error::{Error, Result};
 

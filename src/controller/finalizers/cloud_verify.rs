@@ -322,7 +322,7 @@ fn extract_volume_info(pv: &PersistentVolume) -> (String, CloudProvider) {
 
     // CSI volume
     if let Some(ref csi) = spec.csi {
-        let handle = csi.volume_handle.clone().unwrap_or_default();
+        let handle = csi.volume_handle.clone();
         let driver = csi.driver.clone();
         let provider = match driver.as_str() {
             "ebs.csi.aws.com" | "ebs.csi.aws.com.aws" => CloudProvider::AwsEbs,
